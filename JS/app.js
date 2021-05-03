@@ -2,10 +2,13 @@
 let container = document.getElementById("container");
 let hours = ['6am', '7am','8am','9am', '10am','11am','12am','1pm','2pm','3pm','4pm','5pm','6pm','7pm']
 
-
+let finalTotal =0;
+let arrayTotal=[];
 
     let table = document.createElement('table');
     container.appendChild(table);
+
+    function hofTabel(){
     
     let headrow = document.createElement('tr');
     table.appendChild(headrow);
@@ -17,16 +20,16 @@ let hours = ['6am', '7am','8am','9am', '10am','11am','12am','1pm','2pm','3pm','4
         let thehead = document.createElement('th')
         headrow.appendChild(thehead);
         thehead.textContent=`${hours[i]}`;
-    
+        arrayTotal.push(0);
     }
     
     let thehead1 = document.createElement('th')
     headrow.appendChild(thehead1);
     thehead1.textContent='Daily Location Total';
     
+}
     
-    
-    
+    hofTabel();
    
 
 //========================================
@@ -63,8 +66,12 @@ Location.prototype.gitrandomnuimberofCustomers =function(){
     for (let i = 0; i < hours.length ; i++) {
         this.saleph.push (Math.floor (this.cookiesPh())); 
         this.total= this.total+this.saleph[i];
+        arrayTotal[i]+=this.saleph[i];
     }
+
+    finalTotal+=this.total;
 }
+
 
 
 // prototype render
@@ -127,7 +134,31 @@ Paris.render();
 let Lima = new Location('Lima', 2, 16, 4.6)
 Lima.render();
 
+////===========
 
+function footerTabel(){
+
+let headrow = document.createElement('tr');
+table.appendChild(headrow);
+
+let thehead0 = document.createElement('td')
+headrow.appendChild(thehead0);
+thehead0.textContent='total'
+
+for (let i = 0; i < hours.length; i++) {
+    let thehead = document.createElement('td')
+    headrow.appendChild(thehead);
+    thehead.textContent=arrayTotal[i];
+
+}
+
+let thehead1 = document.createElement('td')
+headrow.appendChild(thehead1);
+thehead1.textContent=finalTotal;
+
+};
+
+footerTabel();
 // Tabels =====================================================================================
 // golbal
 // function tabletest() {
