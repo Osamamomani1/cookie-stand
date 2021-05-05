@@ -136,6 +136,37 @@ Lima.render();
 
 ////===========
 
+
+let storeform =document.getElementById('Storeform');
+storeform.addEventListener('submit', submitter);
+
+
+function submitter(event){
+    event.preventDefault();
+
+    table.deleteRow(table.rows.length -1);
+
+    let name = event.target.locationField.value;
+    let mincust = event.target.mincustomer.value;
+    let maxcust = event.target.maxcustomer.value;
+    let avgsale = event.target.avgcustomer.value; 
+    
+    let addedLocation = new Location(name,mincust,maxcust,avgsale)
+    addedLocation.render();
+
+    //Location.event.render
+
+    
+
+    // let container=getElementById('container')
+    // container.textContent='slkdjaslk';
+
+    footerTabel();
+    document.getElementById("Storeform").reset()
+}
+
+///////////////////////
+
 function footerTabel(){
 
 let headrow = document.createElement('tr');
@@ -159,6 +190,39 @@ thehead1.textContent=finalTotal;
 };
 
 footerTabel();
+
+// ===================================   Form   ======================================
+
+// let storeform =document.getElementById('Storeform');
+// storeform.addEventListener('submit', submitter);
+
+
+// function submitter(event){
+//     event.preventDefault();
+
+//     let name = event.target.locationField.value;
+//     let mincust = event.target.mincustomer.value;
+//     let maxcust = event.target.maxcustomer.value;
+//     let avgsale = event.target.avgcustomer.value; 
+    
+//     let addedLocation = new Location(name,mincust,maxcust,avgsale)
+//     addedLocation.render();
+
+//     Location.event.render
+
+
+// }
+
+
+
+
+
+
+
+
+
+
+
 // Tabels =====================================================================================
 // golbal
 // function tabletest() {
