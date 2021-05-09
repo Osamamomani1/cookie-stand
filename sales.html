@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SALES</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header>
+<body class="sales">
+    <header class="sales">
         <h1>slase</h1>
         <nav>
             <li>
@@ -17,23 +19,24 @@
         <br>
         <h2>add new location</h2>
     </header>
+    <br>
     <main>
         <form id="Storeform">
             <fieldset>
                 <label for="locationField"> location</label>
-                <input type="text" id="locationField" name="locationField">
+                <input type="text" id="locationField" name="locationField" required>
                 
 
                 <label for="mincustomer"> minimum number of customer</label>
-                <input type="number" name="mincustomer" id="mincustomer">
+                <input type="number" name="mincustomer" id="mincustomer" required>
                 <br>
                 <br>
     
                 <label for="maxcustomer"> maximum number of customer</label>
-                <input type="number" name="maxcustomer" id="maxcustomer">
+                <input type="number" name="maxcustomer" id="maxcustomer" required>
 
                 <label for="avgcustomer"> averag number of customer</label>
-                <input type="number" name="avgcustomer" step="0.01" id="avgcustomer">
+                <input type="number" name="avgcustomer" step="0.01" id="avgcustomer" required>
 
                 <input type="submit" value="submit">
 

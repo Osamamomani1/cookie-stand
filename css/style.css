@@ -6,7 +6,8 @@ body {
 width: 85%;
 margin: 0 auto;
 /* background-color: rgb(246, 241, 241); */
-
+/* background: url(https://noshingwiththenolands.com/wp-content/uploads/2019/11/hershey-kiss-cookies-NWT-7.jpg)no-repeat center fixed; */
+background-size: cover;
 
 }
 
@@ -16,7 +17,9 @@ header{
     align-items: center;
     justify-content: space-around;
     position: fixed;
-   background-image: url("imgs/background.jpg");
+   /* background-image: url('../imgs/background.jpg'); */
+   /* background-image: url("imgs/background.jpg"); */
+   background-image: url(https://i.pinimg.com/originals/22/55/0d/22550d50bc930e6802d8b65313b49c87.jpg);
     background-color: silver;
     font-family: 'Brush Script MT', cursive;
     width: 85%;
@@ -42,7 +45,7 @@ header a{
     text-decoration: none;
     font-weight: bold;
     margin-top: 30px;
-    color: #685e46; 
+    color: #e27272;
     font-size: 40px; 
     width: 12%;
 }
@@ -138,3 +141,43 @@ footer img {
     width: 4%;
     float: left;
 }
+
+
+/* =========================================================================================== */
+/* =========================================================================================== */
+/* =========================================================================================== */
+
+fieldset {
+    /* padding: 11%; */
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    margin-top: 15%;
+}
+
+body.sales{
+    background-image: url(https://previews.123rf.com/images/imelnyk/imelnyk1506/imelnyk150600065/41185724-cookies-background.jpg);
+    
+}
+
+table{
+    width: 50%;
+    height: 25%;
+    padding: 50px;
+    
+    margin: 0% auto;
+}
+table,tr,td,th{
+    border: black 1px solid;
+    padding: 7px;
+}
+
+#sale:hover{
+    font-size: 50px;
+}
+
+a:hover{
+    font-size: 22px;
+}
+
+

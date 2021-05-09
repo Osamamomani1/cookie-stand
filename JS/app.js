@@ -156,6 +156,10 @@ function submitter(event){
 
     //Location.event.render
 
+    if (maxcust<=mincust) {
+        alert('maximum should be greater than the minimum')
+        window.location.reload();
+    }
     
 
     // let container=getElementById('container')
